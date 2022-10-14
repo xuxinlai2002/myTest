@@ -2,6 +2,7 @@
 chmod +x v0.2.2/linux/uptickd
 chmod +x v0.2.3/linux/uptickd
 cp v0.2.2/linux/uptickd  $GOPATH/bin
+cp cosmovisor $GOPATH/bin
 
 #
 cd $HOME
@@ -11,12 +12,6 @@ uptickd init test --chain-id=uptick_7000-1
 #
 curl -o ~/.uptickd/config/config.toml https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-1/config.toml
 curl -o ~/.uptickd/config/genesis.json https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-1/genesis.json
-
-#
-cd cosmos-sdk/
-git checkout cosmovisor/v1.3.0
-make cosmovisor
-cp cosmovisor/cosmovisor $GOPATH/bin/cosmovisor
 
 #
 cd $HOME
