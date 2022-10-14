@@ -1,4 +1,5 @@
 
+cd $HOME/myTest
 chmod +x v0.2.2/linux/uptickd
 chmod +x v0.2.3/linux/uptickd
 cp v0.2.2/linux/uptickd  $GOPATH/bin
@@ -14,11 +15,10 @@ curl -o ~/.uptickd/config/config.toml https://raw.githubusercontent.com/UptickNe
 curl -o ~/.uptickd/config/genesis.json https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-1/genesis.json
 
 #
-cd $HOME
 mkdir -p $HOME/.uptickd/cosmovisor/genesis/bin
 mkdir -p $HOME/.uptickd/cosmovisor/upgrades/v0.2.3/bin
-cp $HOME/uptick/release/v0.2.2/linux/uptickd $HOME/.uptickd/cosmovisor/genesis/bin
-cp $HOME/uptick/release/v0.2.3/linux/uptickd $HOME/.uptickd/cosmovisor/upgrades/v0.2.3/bin
+cp $HOME/myTest/v0.2.2/linux/uptickd $HOME/.uptickd/cosmovisor/genesis/bin
+cp $HOME/myTest/v0.2.3/linux/uptickd $HOME/.uptickd/cosmovisor/upgrades/v0.2.3/bin
 
 
 export DAEMON_NAME=uptickd
